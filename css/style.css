@@ -1,0 +1,181 @@
+:root {
+    --animate-delay: 0.3s;
+  }
+body{
+    overflow: hidden;
+}
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 10px solid #FFF;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset: -10px;
+    border-radius: 50%;
+    border: 10px solid #FF3D00;
+    animation: prixClipFix 2s infinite linear;
+}
+
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+    
+li,i,.card{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav-content,
+#search,
+#details,
+#category,
+#area,
+#ingredients,
+#contactUs
+  {
+    display: none;
+}
+
+/* start nav section */
+nav{
+    z-index:999;
+   top: 0;
+}
+.nav-content{
+    white-space: nowrap;
+
+}
+.nav-logo{
+    width: 50px;
+}
+/* end nav section */
+/* start main section */
+
+#mainPage .layer,#search .layer
+{
+    position: absolute;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+
+}
+
+#mainPage .card,
+#search .card{
+    overflow: hidden;
+
+}
+
+#mainPage .card:hover .layer,
+#search .card:hover .layer{
+top:0;
+}
+/* end nav section */
+/* start search section */
+#search input{
+    color: white;
+}
+#search input::placeholder{
+    color:#6C757D;
+}
+
+
+/* end search section */
+/* start ingredients section */
+#ingredients .card {
+background-color: transparent;
+color: white;
+max-height: 240px;
+overflow: hidden;
+}
+#ingredients .card i{
+font-size: 64px;
+
+}
+#ingredients .card h3{
+font-size: 28px;
+font-weight: 500;
+}
+
+
+/* end ingredients section */
+/* start ingredients section */
+#area .card {
+background-color: transparent;
+color: white;
+}
+#area .card i{
+font-size: 64px;
+
+}
+#area .card h3{
+font-size: 28px;
+font-weight: 500;
+}
+
+/* end ingredients section */
+
+
+
+/* start main section */
+
+#category .layer
+{
+    position: absolute;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+    border-radius: 20px;
+
+}
+
+#category .card{
+    overflow: hidden;
+
+}
+
+#category .card:hover .layer{
+top:0;
+}
+/* end nav section */
+/* start details section */
+#details img{
+    border-radius: 20px;
+}
+
+/* end details section */
